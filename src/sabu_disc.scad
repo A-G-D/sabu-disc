@@ -1,8 +1,8 @@
-use <conic_section.scad>
-use <mirror_copy.scad>
-use <array.scad>
-use <pipe.scad>
-use <wormhole.scad>
+use <scad-utils/conic_section.scad>
+use <scad-utils/mirror_copy.scad>
+use <scad-utils/array.scad>
+use <scad-utils/pipe.scad>
+use <scad-utils/wormhole.scad>
 
 /*
 *   Sabu disc module
