@@ -1,0 +1,3 @@
+[submodule "src/scad-utils"]
+	path = src/scad-utils
+	url = https://github.com/A-G-D/scad-utils
