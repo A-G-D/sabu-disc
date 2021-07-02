@@ -14,6 +14,14 @@
 
 <br/>
 
+## Directory Structure
+
+`res/` - STL files, Screenshots, and GIFs
+
+`src/` - source code files
+
+<br/>
+
 ## Module API
 
 ```scad
