@@ -1,0 +1,19 @@
+name: Build Action
+run-name: Build action running
+on: [push]
+jobs:
+  build-stl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Install openscad
+        run: sudo apt-get update -y && sudo apt-get install openscad -y --no-install-recommends && which openscad
+      - name: Export stl file
+        run: openscad -o sabu_disc.stl -D 'quality="production"' src/sabu_disc.scad
+      - uses: actions/upload-artifact@v3
+        with:
+          name: sabu_disc-${{ github.sha }}.stl
+          path: sabu_disc.stl
+          if-no-files-found: error
